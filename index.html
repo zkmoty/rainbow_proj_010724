@@ -1,572 +1,509 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-          crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
 
     <title>The Gallery</title>
-</head>
-<body>
-<div class="container">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">🌈🌈 Git Rainbow Gallery 🌈🌈</h1>
 
-    <h1 class="text-center">
-        🌈🌈 Git Rainbow Gallery 🌈🌈
-    </h1>
-
-    <div class="mt-3">
-        <h2>
-            Team #4: <b>...</b>
-        </h2>
+      <div class="mt-3">
+        <h2>Team #4: <b>...</b></h2>
         <div class="card-deck">
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="data:image/jpeg;base64,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"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Lake Balaton</h5>
+              <p class="card-text">
+                Lake Balaton is a freshwater rift lake in the Transdanubian
+                region of Hungary. It is the largest lake in Central Europe,[3]
+                and one of the region's foremost tourist destinations. The Zala
+                River provides the largest inflow of water to the lake, and the
+                canalized Sió is the only outflow.
+              </p>
+              <p class="card-text">
+                <a href="pages/msge_wendim.html">View Lake Balaton </a>
+              </p>
             </div>
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="mt-3">
-        <h2>
-            Team #2: <b>...</b>
-        </h2>
+      <div class="mt-3">
+        <h2>Team #2: <b>...</b></h2>
         <div class="card-deck">
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="mt-3">
-        <h2>
-            Team #3: <b>...</b>
-        </h2>
+      <div class="mt-3">
+        <h2>Team #3: <b>...</b></h2>
         <div class="card-deck">
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="mt-3">
-        <h2>
-            Team #4: <b>...</b>
-        </h2>
+      <div class="mt-3">
+        <h2>Team #4: <b>...</b></h2>
         <div class="card-deck">
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="mt-3">
-        <h2>
-            Team #5: <b>...</b>
-        </h2>
+      <div class="mt-3">
+        <h2>Team #5: <b>...</b></h2>
         <div class="card-deck">
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="mt-3">
-        <h2>
-            Team #6: <b>...</b>
-        </h2>
+      <div class="mt-3">
+        <h2>Team #6: <b>...</b></h2>
         <div class="card-deck">
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="mt-3">
-        <h2>
-            Team #7: <b>...</b>
-        </h2>
+      <div class="mt-3">
+        <h2>Team #7: <b>...</b></h2>
         <div class="card-deck">
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
+          </div>
         </div>
-    </div>
-    <div class="mt-3">
-        <h2>
-            Team #8: <b>...</b>
-        </h2>
+      </div>
+      <div class="mt-3">
+        <h2>Team #8: <b>...</b></h2>
         <div class="card-deck">
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
-            <div class="card">
-                <img class="card-img-top"
-                     src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Card title
-                    </h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text
-                        below as a natural lead-in to additional content. This
-                        content is a little bit longer.
-                    </p>
-                    <p class="card-text">
-                        <a href="">
-                            More info...
-                        </a>
-                    </p>
-                </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="https://i.ytimg.com/vi/lPmlDROau4g/hqdefault.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <a href=""> More info... </a>
+              </p>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <footer class="my-4 pt-2 border-top text-right">
+      <footer class="my-4 pt-2 border-top text-right">
         <i>That's all folks!</i>
-    </footer>
-
-</div>
-
-</body>
+      </footer>
+    </div>
+  </body>
 </html>
